@@ -1,0 +1,231 @@
+//    for(int i = 1; i < 12; i++) {
+//        for (int j = 2; j < 27; j++) {
+//            if (visibleMap[i][j] == 'G') {
+//                a = i;
+//                b = j;
+//                break;
+//            }
+//            else
+//                continue;
+//        }
+//        if(a == i)
+//            break;
+//    }
+//    for(int i = 0; i < 12; i++) {
+//        for (int j = 0; j < 27; j++) {
+//            if (visibleMap[i][j] == GHOST) {
+//                c = i;
+//                d = j;
+//            }
+//        }
+//    }
+//
+//    if(a == 1 && b == 4){
+//        visibleMap[a + 1][b] = GHOST;
+//        visibleMap[a][b] = ' ';
+//    }
+//    else if(a == 9 && b == 4){
+//        visibleMap[a][b + 2] = GHOST;
+//        visibleMap[a][b] = ' ';
+//    }
+//    else if(b == 4) {
+//        visibleMap[a + 1][b] = GHOST;
+//        visibleMap[a][b] = ' ';
+//    }
+//    else if(a == 1 && b == 20) {
+//        visibleMap[a][b - 2] = GHOST;
+//        visibleMap[a][b] = ' ';
+//    }
+//    else if(b == 20){
+//        visibleMap[a - 1][b] = GHOST;
+//        visibleMap[a][b] = ' ';
+//    }
+//    else if(a == 9 && b == 10){
+//        visibleMap[a - 1][b] = GHOST;
+//        visibleMap[a][b] = ' ';
+//    }
+//    else if(a == 9) {
+//        visibleMap[a][b + 2] = GHOST;
+//        visibleMap[a][b] = ' ';
+//    }
+//    else if (a == 7 && b == 10){
+//        visibleMap[a][b + 2] = GHOST;
+//        visibleMap[a][b] = ' ';
+//    }
+//    else if(a == 1 && b == 14) {
+//        visibleMap[a + 1][b] = GHOST;
+//        visibleMap[a][b] = ' ';
+//    }
+//    else if(a == 1) {
+//        visibleMap[a][b - 2] = GHOST;
+//        visibleMap[a][b] = ' ';
+//    }
+//    else if(b == 10) {
+//        visibleMap[a - 1][b] = GHOST;
+//        visibleMap[a][b] = ' ';
+//    }
+//    else if(a == 7 && b == 16){
+//        visibleMap[a - 1][b] = GHOST;
+//        visibleMap[a][b] = ' ';
+//    }
+//    else if(a == 7){
+//        visibleMap[a][b + 2] = GHOST;
+//        visibleMap[a][b] = ' ';
+//    }
+//    else if(a == 3 && b == 16) {
+//        visibleMap[a][b - 2] = GHOST;
+//        visibleMap[a][b] = ' ';
+//    }
+//    else if(b == 16){
+//        visibleMap[a - 1][b] = GHOST;
+//        visibleMap[a][b] = ' ';
+//    }
+//    else if(a == 3) {
+//        visibleMap[a][b - 2] = GHOST;
+//        visibleMap[a][b] = ' ';
+//    }
+////    else if(a == 9 && b == 20){
+////        visibleMap[a - 1][b] = GHOST;
+////        visibleMap[a][b] = ' ';
+////    }
+////
+////    else if(a == 9 && b == 14) {
+////        visibleMap[a][b + 2] = GHOST;
+////        visibleMap[a][b] = ' ';
+////    }
+////    else if(a == 3 && b == 14) {
+////        visibleMap[a][b - 2] = GHOST;
+////        visibleMap[a][b] = ' ';
+////    }
+//    else if(b == 14) {
+//        visibleMap[a + 1][b] = GHOST;
+//        visibleMap[a][b] = ' ';
+//    }
+////    else if(a == 3 && b == 8) {
+////        visibleMap[a + 1][b] = GHOST;
+////        visibleMap[a][b] = ' ';
+////    }
+////    else if(a == 3) {
+////        visibleMap[a][b - 2] = GHOST;
+////        visibleMap[a][b] = ' ';
+////    }
+////    else if(a == 7 && b == 8) {
+////        visibleMap[a][b + 2] = GHOST;
+////        visibleMap[a][b] = ' ';
+////    }
+////    else if(a == 8) {
+////        visibleMap[a + 1][b] = GHOST;
+////        visibleMap[a][b] = ' ';
+////    }
+////    else if(a == 7) {
+////        visibleMap[a][b + 2] = GHOST;
+////        visibleMap[a][b] = ' ';
+////    }
+//
+//
+//
+//    if(c == 9 && d == 20){
+//        visibleMap[c - 1][d] = GHOST;
+//        visibleMap[c][d] = ' ';
+//    }
+//    else if(c == 1 && d == 20) {
+//        visibleMap[c][d - 2] = GHOST;
+//        visibleMap[c][d] = ' ';
+//    }
+//    else if(d == 20){
+//        visibleMap[c - 1][d] = GHOST;
+//        visibleMap[c][d] = ' ';
+//    }
+//    else if(c == 1 && d == 4){
+//        visibleMap[c + 1][d] = GHOST;
+//        visibleMap[c][d] = ' ';
+//    }
+//    else if(c == 9 && d == 4){
+//        visibleMap[c][d + 2] = GHOST;
+//        visibleMap[c][d] = ' ';
+//    }
+//    else if(d == 4) {
+//        visibleMap[c + 1][d] = GHOST;
+//        visibleMap[c][d] = ' ';
+//    }
+//    else if(c == 1 && d == 14) {
+//        visibleMap[c + 1][d] = GHOST;
+//        visibleMap[c][d] = ' ';
+//    }
+//    else if(c == 1) {
+//        visibleMap[c][d - 2] = GHOST;
+//        visibleMap[c][d] = ' ';
+//    }
+//    else if(c == 9 && d == 14) {
+//        visibleMap[c][d + 2] = GHOST;
+//        visibleMap[c][d] = ' ';
+//    }
+//    else if(c == 3 && d == 14) {
+//        visibleMap[c][d - 2] = GHOST;
+//        visibleMap[c][d] = ' ';
+//    }
+//    else if(d == 14) {
+//        visibleMap[c + 1][d] = GHOST;
+//        visibleMap[c][d] = ' ';
+//    }
+//    else if(c == 3 && d == 8) {
+//        visibleMap[c + 1][d] = GHOST;
+//        visibleMap[c][d] = ' ';
+//    }
+//    else if(c == 3) {
+//        visibleMap[c][d - 2] = GHOST;
+//        visibleMap[c][d] = ' ';
+//    }
+//    else if(c == 7 && d == 8) {
+//        visibleMap[c][d + 2] = GHOST;
+//        visibleMap[c][d] = ' ';
+//    }
+//    else if(c == 9 && d == 10){
+//        visibleMap[c - 1][d] = GHOST;
+//        visibleMap[c][d] = ' ';
+//    }
+//    else if(c == 9) {
+//        visibleMap[c][d + 2] = GHOST;
+//        visibleMap[c][d] = ' ';
+//    }
+//    else if(d == 8) {
+//        visibleMap[c + 1][d] = GHOST;
+//        visibleMap[c][d] = ' ';
+//    }
+//
+//    else if(c == 7) {
+//        visibleMap[c][d + 2] = GHOST;
+//        visibleMap[c][d] = ' ';
+//    }
+////    else if (c == 7 && d == 10){
+////        visibleMap[c][d + 2] = GHOST;
+////        visibleMap[c][d] = ' ';
+////    }
+////    else if(c == 1) {
+////        visibleMap[c][d - 2] = GHOST;
+////        visibleMap[c][d] = ' ';
+////    }
+//    else if(d == 10) {
+//        visibleMap[c - 1][d] = GHOST;
+//        visibleMap[c][d] = ' ';
+//    }
+////    else if(c == 7 && d == 16){
+////        visibleMap[c - 1][d] = GHOST;
+////        visibleMap[c][d] = ' ';
+////    }
+////    else if(c == 7){
+////        visibleMap[c][d + 2] = GHOST;
+////        visibleMap[c][d] = ' ';
+////    }
+////    else if(c == 3 && d == 16) {
+////        visibleMap[c][d - 2] = GHOST;
+////        visibleMap[c][d] = ' ';
+////    }
+////    else if(c == 16){
+////        visibleMap[c - 1][d] = GHOST;
+////        visibleMap[c][d] = ' ';
+////    }
+////    else if(c == 3) {
+////        visibleMap[c][d - 2] = GHOST;
+////        visibleMap[c][d] = ' ';
+////    }
